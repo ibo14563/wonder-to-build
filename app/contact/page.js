@@ -1,4 +1,4 @@
-export const metadata = { title: 'Contact — Wonder to Build' };
+'use client';
 
 export default function Contact() {
   return (
@@ -18,10 +18,9 @@ export default function Contact() {
 
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-5 gap-12">
-          {/* Form */}
           <div className="md:col-span-3">
             <h2 className="text-xl font-bold mb-6">Send us a message</h2>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <div className="space-y-5">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Your name</label>
                 <input type="text" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" placeholder="Ibrahim Ahmed" />
@@ -43,14 +42,13 @@ export default function Contact() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
-                <textarea rows="5" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors resize-none" placeholder="Tell us how we can help..." />
+                <textarea rows={5} className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors resize-none" placeholder="Tell us how we can help..." />
               </div>
-              <button type="submit" className="btn-primary">Send message</button>
+              <button type="button" className="btn-primary">Send message</button>
               <p className="text-xs text-gray-400">Form integration coming soon. For now, email us directly.</p>
-            </form>
+            </div>
           </div>
 
-          {/* Sidebar */}
           <div className="md:col-span-2 space-y-8">
             <div>
               <h3 className="text-sm font-bold mb-3">Specific inquiries</h3>
