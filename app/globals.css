@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand text-white px-7 py-3.5 rounded-full text-sm font-bold tracking-wide transition-all duration-200;
+  }
+  .btn-primary:hover {
+    @apply bg-teal-600;
+    transform: translateY(-1px);
+  }
+  .btn-secondary {
+    @apply border-2 border-brand text-brand px-7 py-3 rounded-full text-sm font-bold transition-all duration-200;
+  }
+  .btn-secondary:hover {
+    @apply bg-brand text-white;
+  }
+  .section-eyebrow {
+    @apply text-xs font-bold tracking-widest uppercase text-brand mb-3 flex items-center gap-2;
+  }
+  .section-eyebrow::before {
+    content: '';
+    @apply w-5 h-0.5 bg-teal-300 rounded-sm;
+    display: block;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-2 leading-tight;
+  }
+  .section-sub {
+    @apply text-base text-gray-500 leading-relaxed mb-12 max-w-xl;
+  }
+}
+
+/* Hero dot grid pattern */
+.hero-dots {
+  background-image: radial-gradient(circle, #0F6E56 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Circuit grid pattern */
+.circuit-grid {
+  background-image:
+    linear-gradient(#5DCAA5 1px, transparent 1px),
+    linear-gradient(90deg, #5DCAA5 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Diagonal pattern */
+.diagonal-pattern {
+  background-image:
+    linear-gradient(45deg, #fff 1px, transparent 1px),
+    linear-gradient(-45deg, #fff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blog prose styling */
+.prose h2 { @apply text-2xl font-bold mt-8 mb-4 text-gray-900; }
+.prose h3 { @apply text-xl font-bold mt-6 mb-3 text-gray-900; }
+.prose p { @apply text-base leading-relaxed text-gray-600 mb-4; }
+.prose ul { @apply list-disc pl-6 mb-4 space-y-2 text-gray-600; }
+.prose ol { @apply list-decimal pl-6 mb-4 space-y-2 text-gray-600; }
+.prose a { @apply text-brand underline; }
+.prose blockquote { @apply border-l-4 border-teal-300 pl-4 italic text-gray-500 my-6; }
+.prose img { @apply rounded-xl my-6; }
+.prose strong { @apply font-bold text-gray-800; }
