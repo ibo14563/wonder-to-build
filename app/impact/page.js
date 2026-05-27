@@ -21,9 +21,9 @@ const tocStages = [
 ];
 
 const studentProjects = [
-  { initials: 'DA', name: 'Dana Ahmad', location: 'Sulaimani', project: 'Smart classroom air quality monitor', track: 'Track 2 · IoT', desc: 'ESP32-based sensor network that tracks CO₂, temperature, and humidity in school classrooms and sends real-time data to a cloud dashboard.' },
-  { initials: 'KH', name: 'Karwan Hassan', location: 'Erbil', project: 'Acoustic crop pest detector', track: 'Track 3 · TinyML', desc: 'TinyML model deployed on Arduino Nano 33 BLE that identifies pest species by sound patterns in agricultural fields.' },
-  { initials: 'SM', name: 'Shilan Mustafa', location: 'Qalladizah', project: 'Accessible doorbell for hearing-impaired', track: 'Track 1 · Foundation', desc: 'Arduino-powered doorbell system that converts sound alerts into bright LED flash patterns and vibration pulses.' },
+  { img: '/images/award-certificate.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz champion', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz, demonstrating strong understanding of circuits, sensors, and basic code. Received an Arduino Starter Kit and AUK certificate of participation.' },
+  { img: '/images/award-kit-boy.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz runner-up', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the hands-on Arduino quiz competition. Showed exceptional curiosity and engagement throughout the workshop. Received an Arduino Starter Kit.' },
+  { img: '/images/award-kit-girl.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz third place', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the workshop quiz. Demonstrated strong problem-solving skills and genuine enthusiasm for electronics. Received an Arduino Starter Kit.' },
 ];
 
 export default function Impact() {
@@ -98,25 +98,17 @@ export default function Impact() {
       {/* Student Projects */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="section-eyebrow">Student showcase</div>
-        <h2 className="section-title">Projects built by our students</h2>
-        <p className="section-sub">Every project is original, documented, and publicly verifiable on GitHub.</p>
+        <h2 className="section-title">Workshop winners — Duhok British International School</h2>
+        <p className="section-sub">Top three students from our Spark Workshop Arduino quiz at DBIS, each receiving an Arduino Starter Kit to continue building at home.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {studentProjects.map((p) => (
-            <div key={p.initials} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:-translate-y-1 transition-all duration-300">
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 h-44 flex items-center justify-center">
-                <p className="text-sm text-teal-400 font-medium">📷 Project photo</p>
-              </div>
+            <div key={p.name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:-translate-y-1 transition-all duration-300">
+              <img src={p.img} alt={p.name} className="w-full h-52 object-cover" />
               <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-full bg-teal-50 text-brand text-xs font-bold flex items-center justify-center">{p.initials}</div>
-                  <span className="text-xs text-gray-400">{p.name} · {p.location}</span>
-                </div>
                 <span className="text-xs font-mono text-brand">{p.track}</span>
-                <h3 className="text-base font-bold mt-1 mb-2">{p.project}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed mb-4">{p.desc}</p>
-                <button className="bg-gray-900 text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                  View on GitHub →
-                </button>
+                <h3 className="text-base font-bold mt-1 mb-1">{p.name}</h3>
+                <p className="text-xs text-gray-400 mb-2">{p.location}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{p.desc}</p>
               </div>
             </div>
           ))}
