@@ -21,9 +21,9 @@ const tocStages = [
 ];
 
 const studentProjects = [
-  { img: '/images/award-kit-boy.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz champion', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz, demonstrating the strongest understanding of circuits, sensors, and basic code. Received an Arduino Starter Kit to continue building at home.' },
-  { img: '/images/award-kit-girl.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz runner-up', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the hands-on Arduino quiz competition. Showed exceptional curiosity and engagement throughout the workshop. Received an Arduino Starter Kit.' },
-  { img: '/images/award-certificate.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz third place', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the workshop quiz. Demonstrated strong problem-solving skills and genuine enthusiasm for electronics. Received an AUK certificate of participation and Arduino Starter Kit.' },
+  { img: '/images/award-kit-boy.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz champion', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
+  { img: '/images/award-kit-girl.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz runner-up', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
+  { img: '/images/award-certificate.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz third place', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
 ];
 
 export default function Impact() {
@@ -99,7 +99,7 @@ export default function Impact() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="section-eyebrow">Student showcase</div>
         <h2 className="section-title">Workshop winners — Duhok British International School</h2>
-        <p className="section-sub">Top three students from our Spark Workshop Arduino quiz at DBIS, each receiving an Arduino Starter Kit to continue building at home.</p>
+        <p className="section-sub">All students received an AUK certificate of participation. The top three scorers in the Arduino quiz each won an Arduino Starter Kit to continue building at home.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {studentProjects.map((p) => (
             <div key={p.name} className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:-translate-y-1 transition-all duration-300">
