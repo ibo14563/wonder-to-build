@@ -20,28 +20,41 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-teal-50 to-emerald-50 py-20 md:py-28 px-6">
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-teal-50 to-emerald-50 px-6">
         <div className="absolute inset-0 hero-dots opacity-[0.06]" />
-        <div className="relative z-10 max-w-3xl mx-auto md:mx-0 md:ml-[8%]">
-          <span className="inline-block bg-brand text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-            501(c)(3) nonprofit
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-5">
-            Don&apos;t just learn technology.{' '}
-            <span className="text-brand">Build something the world has never seen.</span>
-          </h1>
-          <p className="text-lg text-gray-500 leading-relaxed max-w-xl mb-8">
-            Hands-on engineering programs that teach students to create genuine innovations — not copy existing ones. From Kurdistan to the world.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/programs" className="btn-primary no-underline">Apply to a program</Link>
-            <Link href="/donate" className="btn-secondary no-underline">Sponsor a student — $25/mo</Link>
+        <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center py-16 md:py-24">
+          <div>
+            <span className="inline-block bg-brand text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+              501(c)(3) nonprofit
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-5">
+              Don&apos;t just learn technology.{' '}
+              <span className="text-brand">Build something the world has never seen.</span>
+            </h1>
+            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mb-8">
+              Hands-on engineering programs that teach students to create genuine innovations — not copy existing ones. From Kurdistan to the world.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/programs" className="btn-primary no-underline">Apply to a program</Link>
+              <Link href="/donate" className="btn-secondary no-underline">Sponsor a student — $25/mo</Link>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="/images/hero-teaching.jpg"
+              alt="Ibrahim teaching students about robotics in a Kurdistan classroom"
+              className="rounded-2xl shadow-lg w-full object-cover h-[400px]"
+            />
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-md px-4 py-3 border border-gray-100">
+              <p className="text-xs font-bold text-brand">Live from Kurdistan</p>
+              <p className="text-xs text-gray-400">Workshop in progress</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── IMPACT COUNTER BAR ── */}
-      <section className="max-w-6xl mx-auto px-6 -mt-6 relative z-20">
+      <section className="max-w-6xl mx-auto px-6 mt-8 mb-4 relative z-20">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-white rounded-2xl shadow-sm border border-gray-100 divide-x divide-gray-100">
           {stats.map((s) => (
             <Counter key={s.label} target={s.target} label={s.label} />
@@ -69,6 +82,15 @@ export default function Home() {
             </p>
             <span className="text-sm text-brand font-medium">The joke is real. The gap is serious. We fix the root cause.</span>
           </div>
+        </div>
+      </section>
+
+      {/* ── PHOTO BAND ── */}
+      <section className="max-w-6xl mx-auto px-6 pb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <img src="/images/students-robot.jpg" alt="Students crowded around Ibrahim as he demonstrates a robot" className="rounded-2xl object-cover h-48 w-full" />
+          <img src="/images/founder-lab.jpg" alt="Ibrahim working on electronics in his lab" className="rounded-2xl object-cover h-48 w-full" />
+          <img src="/images/students-workshop.jpg" alt="Students engaged in a workshop discussion with robotics equipment" className="rounded-2xl object-cover h-48 w-full hidden md:block" />
         </div>
       </section>
 
@@ -127,9 +149,11 @@ export default function Home() {
         <div className="section-eyebrow">Voices</div>
         <h2 className="section-title">From the workshop</h2>
         <div className="bg-white rounded-2xl border border-gray-100 p-8 md:p-10 flex flex-col md:flex-row gap-6 items-center mt-8">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-100 to-teal-300 flex items-center justify-center text-3xl flex-shrink-0">
-            👤
-          </div>
+          <img
+            src="/images/students-robot.jpg"
+            alt="Students engaged with robotics project"
+            className="w-24 h-24 rounded-full object-cover flex-shrink-0"
+          />
           <div>
             <blockquote className="text-base md:text-lg text-gray-700 leading-relaxed italic mb-4">
               &ldquo;Before Wonder to Build, I thought engineering was something that happened in other countries. Now I have a portfolio of projects I designed myself, and I can explain every line of code and every wire. That&apos;s the difference — I didn&apos;t just build it. I understand it.&rdquo;
@@ -190,7 +214,6 @@ export default function Home() {
           <div className="relative z-10">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Stay connected with Wonder to Build</h2>
             <p className="text-sm text-white/70 mb-8">One email per month. Program updates, student stories, and new tutorials. No spam.</p>
-            {/* PLACEHOLDER: Replace with Mailchimp embed when ready */}
             <div className="max-w-md mx-auto flex gap-2">
               <input type="email" placeholder="Your email address" className="flex-1 px-5 py-3 rounded-full border-2 border-white/30 bg-white/10 text-white placeholder:text-white/50 text-sm focus:outline-none focus:border-white" />
               <button className="bg-white text-brand px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap hover:bg-gray-100 transition-colors">

@@ -35,9 +35,7 @@ export default function OurStory() {
         </div>
 
         {/* Photo placeholder */}
-        <div className="bg-teal-50 rounded-2xl h-64 flex items-center justify-center my-10 border-2 border-dashed border-teal-200">
-          <p className="text-sm text-teal-400 font-medium">📷 Photo of Ibrahim — replace with your image</p>
-        </div>
+        <img src="/images/founder-lab.jpg" alt="Ibrahim Hama Ahmed working on electronics in his lab" className="rounded-2xl w-full h-80 object-cover my-10 shadow-md" />
       </section>
 
       {/* The Problem */}
