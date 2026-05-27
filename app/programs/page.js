@@ -46,6 +46,16 @@ export default function Programs() {
         </div>
       </section>
 
+      {/* Workshop Photos */}
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <div className="grid grid-cols-3 gap-4">
+          <img src="/images/students-tablets.jpg" alt="DBIS students taking notes on tablets during a Spark Workshop" className="rounded-2xl object-cover h-48 w-full" />
+          <img src="/images/student-arduino.jpg" alt="Student examining an Arduino during the workshop" className="rounded-2xl object-cover h-48 w-full" />
+          <img src="/images/volunteer-explaining.jpg" alt="Volunteer explaining a robotics project to students at DBIS" className="rounded-2xl object-cover h-48 w-full" />
+        </div>
+        <p className="text-xs text-gray-400 text-center mt-3">Spark Workshop at Duhok British International School (DBIS)</p>
+      </section>
+
       {/* Curriculum Tracks */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="section-eyebrow">Curriculum tracks</div>
