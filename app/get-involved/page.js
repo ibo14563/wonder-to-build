@@ -72,6 +72,7 @@ export default function GetInvolved() {
 
         {/* Volunteer & Mentor */}
         <div id="mentor">
+          <img src="/images/volunteer-explaining.jpg" alt="Wonder to Build volunteer explaining a robotics project to students at DBIS workshop" className="rounded-2xl w-full h-56 object-cover mb-6" />
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">🤝 Volunteer &amp; mentor</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
             If you&apos;re an engineer, designer, educator, or professional who wants to share your experience, we&apos;re building a mentor network to support our students. Mentors provide guidance during the Innovation Fellowship, review projects for the Annual Challenge, and contribute to curriculum development.
