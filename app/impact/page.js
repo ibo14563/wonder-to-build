@@ -21,9 +21,9 @@ const tocStages = [
 ];
 
 const studentProjects = [
-  { img: '/images/award-certificate.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz champion', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz, demonstrating strong understanding of circuits, sensors, and basic code. Received an Arduino Starter Kit and AUK certificate of participation.' },
-  { img: '/images/award-kit-boy.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz runner-up', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the hands-on Arduino quiz competition. Showed exceptional curiosity and engagement throughout the workshop. Received an Arduino Starter Kit.' },
-  { img: '/images/award-kit-girl.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz third place', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the workshop quiz. Demonstrated strong problem-solving skills and genuine enthusiasm for electronics. Received an Arduino Starter Kit.' },
+  { img: '/images/award-kit-boy.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz champion', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz, demonstrating the strongest understanding of circuits, sensors, and basic code. Received an Arduino Starter Kit to continue building at home.' },
+  { img: '/images/award-kit-girl.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz runner-up', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the hands-on Arduino quiz competition. Showed exceptional curiosity and engagement throughout the workshop. Received an Arduino Starter Kit.' },
+  { img: '/images/award-certificate.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz third place', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the workshop quiz. Demonstrated strong problem-solving skills and genuine enthusiasm for electronics. Received an AUK certificate of participation and Arduino Starter Kit.' },
 ];
 
 export default function Impact() {
