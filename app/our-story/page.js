@@ -109,8 +109,8 @@ export default function OurStory() {
           {[
             { year: '2024', text: 'Ibrahim identifies the innovation gap through his work at AUK and Leopard Radio. Begins developing curriculum framework.' },
             { year: '2025', text: 'CEE fellowship begins. Wonder to Build concept formalized. Curriculum tracks designed. First workshop photos documented.' },
-            { year: '2026 H1', text: '501(c)(3) incorporation in progress. Website development. Partnership outreach. Program materials finalized.' },
-            { year: '2026 H2', text: 'CEP implementation in Kurdistan. First Spark Workshops in schools. MakerCore pilot cohort. YouTube channel launch.' },
+            { year: 'Now', text: '501(c)(3) application submitted. Website live. Partnership outreach underway. First workshop delivered at DBIS.' },
+            { year: 'Next', text: 'Additional Spark Workshops across Kurdistan schools. MakerCore pilot cohort. YouTube channel launch.' },
             { year: '2027+', text: 'MENA regional expansion. Educator certification at scale. Innovation Fellowship launch. Annual Innovation Challenge inaugural year.' },
           ].map((m) => (
             <div key={m.year} className="relative">

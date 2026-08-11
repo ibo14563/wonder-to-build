@@ -77,7 +77,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-100 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-xs text-gray-400">
-            © 2026 Wonder to Build. A registered 501(c)(3) nonprofit. All donations are tax-deductible.
+            © 2026 Wonder to Build. 501(c)(3) status pending. Donations will be tax-deductible once approved.
           </p>
           <div className="flex gap-5">
             <Link href="/contact" className="text-xs text-gray-400 hover:text-brand transition-colors no-underline">Contact</Link>

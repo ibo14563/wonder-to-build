@@ -4,26 +4,25 @@ import Link from 'next/link';
 export const metadata = { title: 'Impact — Wonder to Build' };
 
 const stats = [
-  { target: 247, label: 'Students reached' },
-  { target: 12, label: 'Schools partnered' },
-  { target: 18, label: 'Educators certified' },
-  { target: 186, label: 'Badges issued' },
-  { target: 134, label: 'GitHub projects' },
-  { target: 4, label: 'Countries active' },
+  { target: 20, label: 'Students reached' },
+  { target: 1, label: 'School partnered' },
+  { target: 3, label: 'Educators engaged' },
+  { target: 14, label: 'Volunteers' },
+  { target: 1, label: 'Country active' },
 ];
 
 const tocStages = [
-  { num: '01', title: 'Inputs', items: ['Donor funding and grants', 'Arduino, ESP32, TinyML hardware', 'Curriculum and IP literacy modules', 'Volunteer mentors and engineers', 'School and ministry partnerships'], color: 'border-t-amber-400 bg-amber-50' },
-  { num: '02', title: 'Activities', items: ['Spark Workshops in schools', 'MakerCore online cohorts', 'Innovation Fellowship program', 'Educator certification training', 'Monthly Maker Kit fulfillment'], color: 'border-t-teal-500 bg-teal-50' },
-  { num: '03', title: 'Outputs', items: ['Students trained and enrolled', 'Credly badges issued', 'GitHub portfolios published', 'Teachers certified to teach', 'Original SDG-framed projects built'], color: 'border-t-purple-500 bg-purple-50' },
+  { num: '01', title: 'Inputs', items: ['Volunteer educators and engineers', 'Arduino, ESP32, TinyML hardware', 'Curriculum and IP literacy modules', 'School partnerships in Kurdistan', 'Founding team resources'], color: 'border-t-amber-400 bg-amber-50' },
+  { num: '02', title: 'Activities', items: ['Spark Workshops in schools', 'MakerCore online cohorts (upcoming)', 'Innovation Fellowship (upcoming)', 'Educator certification training (upcoming)', 'Monthly Maker Kit fulfillment (upcoming)'], color: 'border-t-teal-500 bg-teal-50' },
+  { num: '03', title: 'Outputs', items: ['Students trained and enrolled', 'AUK certificates of participation', 'Arduino Starter Kits awarded', 'Teachers certified to teach', 'Original SDG-framed projects built'], color: 'border-t-purple-500 bg-purple-50' },
   { num: '04', title: 'Outcomes', items: ['Students distinguish creation from imitation', 'Verified technical skills and credentials', 'IP and attribution literacy adopted', 'Ethical AI use embedded in practice', 'Schools adopt maker education'], color: 'border-t-orange-400 bg-orange-50' },
   { num: '05', title: 'Long-term impact', items: ['Generation of genuine innovators in MENA', 'Innovation culture replaces copy culture', 'Students compete globally with proof of work', 'Educator multiplier scales to thousands', 'Open-source SDG solutions from underserved regions'], color: 'border-t-pink-500 bg-pink-50' },
 ];
 
 const studentProjects = [
-  { img: '/images/award-kit-boy.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz champion', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
-  { img: '/images/award-kit-girl.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz runner-up', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
-  { img: '/images/award-certificate.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', project: 'Arduino quiz third place', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
+  { img: '/images/award-kit-boy.jpg', name: '1st Place — DBIS Quiz Winner', location: 'Duhok British International School', track: 'Spark Workshop · DBIS', desc: 'Top scorer in the post-workshop Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
+  { img: '/images/award-kit-girl.jpg', name: '2nd Place — DBIS Quiz Winner', location: 'Duhok British International School', track: 'Spark Workshop · DBIS', desc: 'Second-place finisher in the Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
+  { img: '/images/award-certificate.jpg', name: '3rd Place — DBIS Quiz Winner', location: 'Duhok British International School', track: 'Spark Workshop · DBIS', desc: 'Third-place finisher in the Arduino quiz. Received an Arduino Starter Kit as a prize on top of the certificate of participation that all workshop students received.' },
 ];
 
 export default function Impact() {
@@ -38,20 +37,38 @@ export default function Impact() {
             We measure impact in things <span className="text-brand">students build</span>, not promises we make.
           </h1>
           <p className="text-lg text-gray-500 leading-relaxed max-w-xl">
-            Every number on this page links back to a student, a project, or a portfolio. If we claim a student built something, you can find it on their GitHub.
+            Every number on this page is a real student, a real workshop, a real photograph. We&apos;re at the beginning — and we&apos;d rather show you honest small numbers than inflated ones.
           </p>
         </div>
       </section>
 
       {/* Counters */}
       <div className="max-w-6xl mx-auto px-6 -mt-6 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-white rounded-2xl shadow-sm border border-gray-100 divide-x divide-gray-100">
+        <p className="text-center text-xs font-bold tracking-widest uppercase text-brand mb-4">Pilot workshop — DBIS, Duhok</p>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 bg-white rounded-2xl shadow-sm border border-gray-100 divide-x divide-gray-100">
           {stats.map((s) => <Counter key={s.label} target={s.target} label={s.label} />)}
         </div>
       </div>
 
+      {/* Honest Framing */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="section-eyebrow">Where we are</div>
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">A real pilot. A clear path forward.</h2>
+        <div className="space-y-4 text-gray-600 leading-relaxed">
+          <p>
+            In early 2024, Wonder to Build ran its first-ever Spark Workshop at the Duhok British International School. Around 20 students attended, 3 of their teachers engaged with the curriculum, and 14 volunteers helped run the day. Every student received an AUK certificate of participation. The top three scorers in the Arduino quiz each won an Arduino Starter Kit.
+          </p>
+          <p>
+            That workshop is our proof of concept. It showed us the curriculum works, students respond to it, and schools want more of it. We&apos;re now preparing to expand across Kurdistan and the wider MENA region as our 501(c)(3) status is approved and our formal programs launch.
+          </p>
+          <p className="text-sm text-gray-500 italic">
+            The counters above will grow. The photos on this page are real. That&apos;s the promise: everything we claim, we can prove.
+          </p>
+        </div>
+      </section>
+
       {/* Theory of Change */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="section-eyebrow">Theory of change</div>
         <h2 className="section-title">From investment to lasting impact</h2>
         <p className="section-sub">Our model traces a clear line from resources invested to systemic change achieved.</p>
@@ -77,7 +94,7 @@ export default function Impact() {
         <div className="max-w-6xl mx-auto">
           <div className="section-eyebrow">SDG alignment</div>
           <h2 className="section-title">How we contribute to the global goals</h2>
-          <p className="section-sub">Every program advances specific Sustainable Development Goals with measurable outcomes.</p>
+          <p className="section-sub">Every program is designed to advance specific Sustainable Development Goals with measurable outcomes.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {[
               { num: '4', title: 'Quality education', desc: 'Every program delivers verifiable technical skills and industry-recognized Credly credentials that complement formal education systems. Students gain hands-on engineering competencies that traditional curricula often miss.', color: 'bg-red-50 border-t-red-700' },
@@ -120,14 +137,13 @@ export default function Impact() {
         <div className="bg-brand rounded-2xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
           <div className="absolute inset-0 diagonal-pattern opacity-[0.04]" />
           <div className="relative z-10 max-w-md">
-            <h2 className="text-2xl font-bold text-white mb-3">Download our 2026 impact report</h2>
-            <p className="text-sm text-white/70 leading-relaxed">Full data, student outcomes, financial transparency, and SDG contribution metrics.</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Impact report coming soon</h2>
+            <p className="text-sm text-white/70 leading-relaxed">Once our 501(c)(3) is approved and our first formal programs launch, we&apos;ll publish a full impact report with student outcomes, financial transparency, and SDG contribution metrics.</p>
           </div>
           <div className="relative z-10 text-center">
-            <button className="bg-white text-brand font-bold px-8 py-4 rounded-xl text-sm hover:bg-gray-100 transition-colors">
-              📄 Download impact report (PDF)
-            </button>
-            <p className="text-xs text-white/40 mt-3">Updated quarterly · Last update: Q2 2026</p>
+            <Link href="/contact" className="inline-block bg-white text-brand font-bold px-8 py-4 rounded-xl text-sm hover:bg-gray-100 transition-colors no-underline">
+              Get notified when it&apos;s ready
+            </Link>
           </div>
         </div>
       </section>

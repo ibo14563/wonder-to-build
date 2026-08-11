@@ -8,12 +8,11 @@ const programs = [
 ];
 
 const stats = [
-  { target: 247, label: 'Students reached' },
-  { target: 12, label: 'Schools partnered' },
-  { target: 18, label: 'Educators certified' },
-  { target: 186, label: 'Badges issued' },
-  { target: 134, label: 'GitHub projects' },
-  { target: 4, label: 'Countries active' },
+  { target: 20, label: 'Students reached' },
+  { target: 1, label: 'School partnered' },
+  { target: 3, label: 'Educators engaged' },
+  { target: 14, label: 'Volunteers' },
+  { target: 1, label: 'Country active' },
 ];
 
 export default function Home() {
@@ -25,7 +24,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center py-16 md:py-24">
           <div>
             <span className="inline-block bg-brand text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-              501(c)(3) nonprofit
+              501(c)(3) pending
             </span>
             <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-5">
               Don&apos;t just learn technology.{' '}
@@ -46,8 +45,8 @@ export default function Home() {
               className="rounded-2xl shadow-lg w-full object-cover h-[400px]"
             />
             <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-md px-4 py-3 border border-gray-100">
-              <p className="text-xs font-bold text-brand">Live from Kurdistan</p>
-              <p className="text-xs text-gray-400">Workshop in progress</p>
+              <p className="text-xs font-bold text-brand">Pilot workshop</p>
+              <p className="text-xs text-gray-400">DBIS, Duhok</p>
             </div>
           </div>
         </div>
@@ -55,7 +54,8 @@ export default function Home() {
 
       {/* ── IMPACT COUNTER BAR ── */}
       <section className="max-w-6xl mx-auto px-6 mt-8 mb-4 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-white rounded-2xl shadow-sm border border-gray-100 divide-x divide-gray-100">
+        <p className="text-center text-xs font-bold tracking-widest uppercase text-brand mb-4">Pilot workshop — DBIS, Duhok</p>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 bg-white rounded-2xl shadow-sm border border-gray-100 divide-x divide-gray-100">
           {stats.map((s) => (
             <Counter key={s.label} target={s.target} label={s.label} />
           ))}

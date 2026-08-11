@@ -53,7 +53,7 @@ export default function Programs() {
           <img src="/images/student-arduino.jpg" alt="Student examining an Arduino during the workshop" className="rounded-2xl object-cover h-48 w-full" />
           <img src="/images/volunteer-explaining.jpg" alt="Volunteer explaining a robotics project to students at DBIS" className="rounded-2xl object-cover h-48 w-full" />
         </div>
-        <p className="text-xs text-gray-400 text-center mt-3">Spark Workshop at Duhok British International School (DBIS)</p>
+        <p className="text-xs text-gray-400 text-center mt-3">From our pilot Spark Workshop at Duhok British International School (DBIS)</p>
       </section>
 
       {/* Curriculum Tracks */}
